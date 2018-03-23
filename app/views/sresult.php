@@ -1,6 +1,6 @@
 <article class="postcontent">
 	<?php 
-    foreach ($allPost as $key => $value) {
+    foreach ($postbysearch as $key => $value) {
         ?>
 	<div class="post">
 		<div class="title">

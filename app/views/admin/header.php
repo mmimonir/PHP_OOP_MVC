@@ -28,38 +28,16 @@ table.tblone tr:nth-child(2n){background:#fdf0f1;height:30px;}
 input[type="text"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:228px;font-size:16px}
 input[type="submit"]{cursor: pointer}
 
-.postcontent{width:560px; border-right:1px solid #ddd; float: left; margin-right: 19px; padding-right: 20px; overflow: hidden;}
-.post{margin-bottom: 40px;}
-.post .readmore{float: right;}
-.post .readmore a{}
-.post h2{border-bottom: 1px dashed #ddd; margin: 0; padding-bottom: 10px;}
-.post h2 a{text-decoration: none;color: #000;}
+.adminleft{width: 200px;float: left;border-right: 1px solid #ddd;margin-right: 10px;padding-right: 10px;}
+.widget{margin-bottom: 20px;}
+.widget h3{margin: 0;background:#3399ff;border-bottom: 2px solid #066cd2; color:#000; margin: 0 0 2px;padding: 5px;text-shadow:0 1px 1px #fff;}
+.widget ul{margin: 0;padding: 0;list-style: none;}
+.widget ul li{display: block;}
+.widget ul li a{background: #ddd; border-bottom: 1px solid #fff; color:#000; display: block;padding: 5px 10px;text-decoration: none;}
+.widget ul li a:hover{background:#bebebe;}
 
-.sidebar{width: 218px;float:right; overflow: hidden;}
-.widget {margin-bottom: 20px;}
-.widget h2{border:1px solid #ddd; margin:0 0 10px; padding: 4px 10px;}
-.widget ul{margin:0; padding:0; list-style: none;}
-.widget ul li{}
-.widget ul li a{background: #3399ff; color: #fff; display: block; margin-bottom: 1px; padding: 5px; text-decoration: none;}
-.widget ul li a:hover{background: #5ec4ff}
-
-.details{}
-.details .title{border-bottom: 1px dashed #ddd;}
-.details .title h2{margin: 0;}
-.details .title p{margin: 0; padding: 5px 0;}
-
-.desc{}
-.desc p{line-height:24px; text-align: justify;}
-
-.searchoption{border-bottom: 2px dashed #3399ff; margin-bottom:15px; padding-bottom: 10px; overflow:hidden;}
-.menu{float: left;margin-top: 10px;font-size:18px;}
-.menu a{text-decoration: none; background: #f2f2f2; border:1px solid #999; color:#666; padding:5px 10px;}
-.search{float: right;}
-.catsearch{border:1px solid #ddd; font-size:16px; margin-bottom: 5px; padding: 5px; width: 228px; cursor:pointer;}
-.submitbtn{cursor: pointer; font-size:18px; padding:3px 10px;}
-
-
-
+.adminright{width: 577px;float: right;padding: 5px 10px; background:#fafafa;}
+.adminright h2{margin: 0 0 10px;border-bottom: 2px dashed #666;padding-bottom: 10px;color:#666;}
 
 
 .footeroption{height:90px;background:#177de3;overflow:hidden;padding-top:10px;}
@@ -73,3 +51,5 @@ input[type="submit"]{cursor: pointer}
 	
   </header>
 <div class="content">
+
+Admin Panel <hr/>
