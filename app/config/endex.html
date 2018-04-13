@@ -4,15 +4,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>Advanced PHP OOP Bangla Tutorial</title>
 <style>
-body {font-family: arial;font-size: 15px;line-height: 18px;margin: 0 auto;width: 850px;}
-<?php 
-foreach ($color as $key => $value) {
-    ?>
-body{background:<?php echo $value['color']; ?>;}
-<?php
-} ?>
+body {font-family: arial;font-size: 15px;line-height: 18px;margin: 0 auto;width: 850px;background:#EEEEEE}
 a{color:#3399FF;}
-.headeroption {background: #3399ff url("img/php.png") no-repeat scroll 25px 12px;height: 74px;overflow: hidden;padding-left: 140px;}
+.headeroption {background: #3399ff url("../img/php.png") no-repeat scroll 25px 12px;height: 74px;overflow: hidden;padding-left: 140px;}
 .headeroption h2{color: #000;font-size: 30px;padding-top: 2px;text-shadow: 0 1px 1px #fff;}
 .content{background: #fff;border: 6px solid #3399ff;font-size: 16px;line-height: 22px;margin-bottom: 3px;margin-top: 3px;min-height: 380px;overflow: hidden;padding: 10px;}
 
@@ -31,26 +25,15 @@ a{color:#3399FF;}
 table.tblone tr:nth-child(2n+1){background:#fff;height:30px;}
 table.tblone tr:nth-child(2n){background:#fdf0f1;height:30px;}
 
-input[type="text"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:350px;font-size:16px}
-.cat {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:300px;font-size:16px; cursor:pointer;}
+input[type="text"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:228px;font-size:16px}
 input[type="submit"]{cursor: pointer}
-.txtarea{width:350px; height:150px;}
-
-.adminleft{width: 200px;float: left;border-right: 1px solid #ddd;margin-right: 10px;padding-right: 10px;}
-.widget{margin-bottom: 20px;}
-.widget h3{margin: 0;background:#3399ff;border-bottom: 2px solid #066cd2; color:#000; margin: 0 0 2px;padding: 5px;text-shadow:0 1px 1px #fff;}
-.widget ul{margin: 0;padding: 0;list-style: none;}
-.widget ul li{display: block;}
-.widget ul li a{background: #ddd; border-bottom: 1px solid #fff; color:#000; display: block;padding: 5px 10px;text-decoration: none;}
-.widget ul li a:hover{background:#bebebe;}
-
-.adminright{width: 577px;float: right;padding: 5px 10px; background:#fafafa;}
-.adminright h2{margin: 0 0 10px;border-bottom: 2px dashed #666;padding-bottom: 10px;color:#666;}
-
 
 .footeroption{height:90px;background:#177de3;overflow:hidden;padding-top:10px;}
 .footerone {background: #3aa0ff;border-radius: 5px;float: left;font-size:18px;line-height:23px;margin-left: 10px;padding:6px 10px;text-align:center;text-shadow: 1px 0 2px #fff;width:390px;overflow: hidden;}
 .footerone p{margin:0;}
+.notfound{text-align: center;}
+.notfound h1{margin: 0; padding:0; font-size:70px; padding-bottom:15px;}
+.notfound h1 span{display: block;line-height: 231px; font-size: 140px; color: red;}
 </style>
 </head>
 <body>
@@ -60,4 +43,35 @@ input[type="submit"]{cursor: pointer}
   </header>
 <div class="content">
 
-Admin Panel <span style="float:right;"><a href="<?php echo BASE_URL; ?>" target="_blank">Visit Website</a></span><hr/>
+<div class="notfound">
+	<h1><span>404</span>Not Found</h1>
+	<p>Please Visit Home Page and Search....
+		<script type="text/javascript">
+		var link = "Visit Home".link("http://localhost/mvc");
+		document.write(link);
+	</script>
+		
+	</p>
+</div>
+
+
+
+
+</div>
+
+  <footer class="footeroption">
+	  <section class="footerone">
+	  <p>Delowar Jahan Imran</p>
+	  <p>Oracle Certified Professional,</p>
+	  <p>Java SE 6 Programmer</p>
+	  
+	  </section>
+	  <section class="footerone">
+		  <p>Like us: facebook.com/ProDelowar</p>
+		  <p>Join us: facebook.com/groups/PBPTBD</p>
+		  <p>Web: www.trainingWithLiveProject.com</p>
+	  </section>
+  </footer>
+
+</body>
+</html>

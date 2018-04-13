@@ -1,11 +1,7 @@
 
 	<h2>Add New Category</h2>
-	<?php 
-if (isset($msg)) {
-    echo "<span style='color:green; font-weight:bold;'>".$msg."</span>";
-}
- ?>
-<form action="http://localhost/mvc/Category/insertCategory" method="post">
+	
+<form action="<?php echo BASE_URL; ?>/Admin/insertCategory" method="post">
 	<table>
 		<tr>
 			<td>Category Name</td>

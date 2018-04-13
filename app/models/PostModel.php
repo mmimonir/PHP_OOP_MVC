@@ -20,6 +20,17 @@ class PostModel extends DModel
         return $this->db->select($sql);
     }
 
+    public function getPostList($tablePost, $tableCat)
+    {
+        $sql  = "SELECT $tablePost.*, $tableCat.catName FROM $tablePost
+        INNER JOIN $tableCat
+        ON $tablePost.postCat = $tableCat.catId";
+        return $this->db->select($sql);
+
+        // $sql  = "SELECT * FROM $table ORDER BY postId DESC";
+        // return $this->db->select($sql);
+    }
+
     public function getPostById($tablePost, $tableCat, $postId)
     {
         $sql  = "SELECT $tablePost.*, $tableCat.catName FROM $tablePost
@@ -67,5 +78,29 @@ class PostModel extends DModel
         }
         
         return $this->db->select($sql);
+    }
+
+    public function insertPost($table, $data)
+    {
+        return $this->db->insert($table, $data);
+    }
+
+    public function postById($tablePost, $tableCat, $postId)
+    {
+        $sql  = "SELECT $tablePost.*, $tableCat.catName, $tableCat.catId FROM $tablePost
+        INNER JOIN $tableCat
+        ON $tablePost.postCat = $tableCat.catId
+        WHERE $tablePost.postId = $postId";
+        return $this->db->select($sql);
+    }
+
+    public function updatePost($tablePost, $data, $cond)
+    {
+        return $this->db->update($tablePost, $data, $cond);
+    }
+
+    public function deletePostById($table, $cond)
+    {
+        return $this->db->delete($table, $cond);
     }
 }

@@ -13,7 +13,7 @@
             $text = substr($text, 0, 200);
             echo $text;
         } ?></p>
-		<div class="readmore"><a href="<?php echo BASE_URL ?>/Index/postDetails/<?php echo $value['postId'] ?>">Ream More...</a></div>
+		<div class="readmore"><a href="<?php echo BASE_URL ?>/Index/postDetails/<?php echo $value['postId'] ?>">Read More...</a></div>
 	</div>
 	<?php
     } ?>

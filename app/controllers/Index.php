@@ -36,7 +36,7 @@ class Index extends Dcontroller
         $this->load->view("footer");
     }
 
-    public function postDetails($postId)
+    public function postDetails($postId=null)
     {
         $data = array();
         $tablePost = "tbl_post";
@@ -57,7 +57,7 @@ class Index extends Dcontroller
         $this->load->view("sidebar", $data);
         $this->load->view("footer");
     }
-    public function postByCat($catId)
+    public function postByCat($catId=null)
     {
         $data = array();
         $tablePost = "tbl_post";
@@ -102,5 +102,10 @@ class Index extends Dcontroller
         $data['latestPost'] = $postModel->getLatestPost($tablePost);
         $this->load->view("sidebar", $data);
         $this->load->view("footer");
+    }
+
+    public function notFound()
+    {
+        $this->load->view('404');
     }
 }

@@ -22,17 +22,18 @@ class Login extends Dcontroller
 
     public function loginAuth()
     {
-        $userTable = "tbl_user";
-        $userName = $_POST['userName'];
-        $password = md5($_POST['password']);
+        $userTable  = "tbl_user";
+        $userName   = $_POST['userName'];
+        $password   = md5($_POST['password']);
         $loginModel = $this->load->model("LoginModel");
-        $count = $loginModel->userControl($userTable, $userName, $password);
+        $count      = $loginModel->userControl($userTable, $userName, $password);
         if ($count > 0) {
             $result = $loginModel->getUserData($userTable, $userName, $password);
             Session::init();
             Session::set("login", true);
             Session::set("userName", $result[0]['userName']);
             Session::set("userId", $result[0]['userId']);
+            Session::set("level", $result[0]['level']);
             header("Location:".BASE_URL."/Admin");
         } else {
             header("Location:".BASE_URL."/Login");

@@ -45,11 +45,11 @@ class Main
                 if (class_exists($this->controllerName)) {
                     $this->controller = new $this->controllerName();
                 } else {
-                    header("Location: ".BASE_URL."/Index");
+                    header("Location: ".BASE_URL."/Index/notFound");
                     // echo "<script>window.location = 'http://localhost/mvc/Index/home';</script>";
                 }
             } else {
-                header("Location: ".BASE_URL."/Index");
+                header("Location: ".BASE_URL."/Index/notFound");
                 // echo "<script>window.location = 'http://localhost/mvc/Index/home';</script>";
             }
         }
@@ -59,33 +59,33 @@ class Main
     
     public function callMethod()
     {
-        // if (isset($this->url[1])) {
-        //     $method = $this->url[1];
-        // }
+        if (isset($this->url[1])) {
+            $method = $this->url[1];
+        }
         if (isset($this->url[2])) {
-            // $this->methodName = $method;
-            $this->methodName = $this->url[2];
+            $this->methodName = $method;
+            // $this->methodName = $this->url[2];
             if (method_exists($this->controller, $this->methodName)) {
                 $this->controller->{$this->methodName}($this->url[2]);
             } else {
-                header("Location: ".BASE_URL."/Index");
+                header("Location: ".BASE_URL."/Index/notFound");
                 // echo "<script>window.location = 'http://localhost/mvc/Index/home';</script>";
             }
         } else {
             if (isset($this->url[1])) {
-                // $this->methodName = $method;
-                $this->methodName = $this->url[1];
+                $this->methodName = $method;
+                // $this->methodName = $this->url[1];
                 if (method_exists($this->controller, $this->methodName)) {
                     $this->controller->{$this->methodName}();
                 } else {
-                    header("Location: ".BASE_URL."/Index");
+                    header("Location: ".BASE_URL."/Index/notFound");
                     // echo "<script>window.location = 'http://localhost/mvc/Index/home';</script>";
                 }
             } else {
                 if (method_exists($this->controller, $this->methodName)) {
                     $this->controller->{$this->methodName}();
                 } else {
-                    header("Location: ".BASE_URL."/Index");
+                    header("Location: ".BASE_URL."/Index/notFound");
                     // echo "<script>window.location = 'http://localhost/mvc/Index/home';</script>";
                 }
             }
